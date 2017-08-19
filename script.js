@@ -93,26 +93,11 @@ function pastWeather(a,b){
   for(var n = 1; n<=7; n++){
     var unixTimeStamp = new Date((new Date()).valueOf() - 1000*60*60*24*n).getTime() / 1000;
     console.log(unixTimeStamp);
-    $.getJSON("https://api.apixu.com/v1//history.json?key=f86c0b5f1f0b4676a62170516171908&q=" + lat_hist + "," + lon_hist + "&unixdt=" + unixTimeStamp, function(data){
-    var d = new Date(data.forecast.forecastday[0].date);
-   var weekday = new Array(7);
-      weekday[0] = "Sunday";
-      weekday[1] = "Monday";
-      weekday[2] = "Tuesday";
-      weekday[3] = "Wednesday";
-      weekday[4] = "Thursday";
-      weekday[5] = "Friday";
-      weekday[6] = "Saturday";
-      var monthNames = [
-        "January", "February", "March",
-        "April", "May", "June", "July",
-        "Aug", "September", "October",
-        "November", "December"
-      ];  
-      
-      monthNames
-      $(".weather-history").append("<div class='hist_container'>" + weekday[d.getDay()] + ', ' + d.getDate() + ' ' + monthNames[d.getMonth()] + "<br/><i class=\'wi wi-thermometer\' id='icon_hist'></i><br/>" + data.forecast.forecastday[0].day.avgtemp_f + " &#8457; <br/>" + data.forecast.forecastday[0].day.condition.text +  "</div>" )
+    $.getJSON("https://api.apixu.com/v1//history.json?key=f86c0b5f1f0b4676a62170516171908&q=" + lat_hist + "," + lon_hist + "&unixdt=" + unixTimeStamp, function(history){
+      console.log(history);
+       $(".weather-history .hist_date").append("<span class='cluster'>" + history.forecast.forecastday[0].date + "<br/>" +  history.forecast.forecastday[0].day.condition.text + "</span><br/>");
+     
     });
+}
   }
- }
    

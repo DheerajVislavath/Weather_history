@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico|Saira+Semi+Condensed');
 body {
   background-attachment: fixed;
-  image: filter(url("https://wallpaperscraft.com/image/rain_island_clouds_volume_sky_52002_1920x1080.jpg"), blur(20px));
+  image: filter(url("https://wallpaperscraft.com/image/rain_island_clouds_volume_sky_52002_1920x1080.jpg"), blur(20px)) s;
   background-repeat: no-repeat;
   background-size: cover;
   transition: background 1s linear;
+}
+.main {
+  text-align: center;
 }
 .main h1 {
   font-family: Pacifico;
@@ -27,7 +30,6 @@ body {
   outline: none;
 }
 .main {
-  text-align: center;
   background-color: rgba(203, 212, 194, 0.3);
   width: 50%;
   margin: 2% 25%;
@@ -57,49 +59,4 @@ body {
 }
 .btnnone {
   background-color: transparent;
-}
-.weather-history {
-  font-family: 'Saira Semi Condensed', sans-serif;
-  font-size: 20px;
-}
-.weather-history p {
-  font-size: 20px;
-}
-.main h2 {
-  font-family: Pacifico;
-  font-size: 30px;
-  margin: 30px;
-}
-.hr-style {
-  background-color: #f0f0f0;
-  width: 500px;
-  float: center;
-}
-hr.style14 {
-  border: 0;
-  height: 1px;
-  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-}
-.weather-history i {
-  font-size: 50px;
-}
-.weather-history::after {
-  content: " ";
-  display: block;
-  height: 0;
-  clear: both;
-}
-.hist_container {
-  padding: 10px;
-  margin-right: 5%;
-  margin-left: 5%;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  background-color: rgba(6, 174, 213, 0.3);
-  width: 40%;
-  border-radius: 6%;
-  float: left;
 }
