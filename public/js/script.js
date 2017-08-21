@@ -69,7 +69,7 @@ console.log("The local time is " + nd.toLocaleString());
  $(".symbol").html(icon); 
      var s_a = "https://images.pexels.com/photos/46160/field-clouds-sky-earth-46160.jpeg?w=940&h=650&auto=compress&cs=tinysrgb";
      var s_b = "https://wallpaperscraft.com/image/rain_island_clouds_volume_sky_52002_1920x1080.jpg";
-     var s_c = "https://cdn.pixabay.com/photo/2015/06/19/20/14/water-815271_960_720.jpg";
+     var s_c = "https://images.pexels.com/photos/459451/pexels-photo-459451.jpeg?w=940&h=650&auto=compress&cs=tinysrgb";
      var s_d = "https://images.pexels.com/photos/5230/road-fog-foggy-mist.jpg?w=940&h=650&auto=compress&cs=tinysrgb";
  var bgImage = ({
   "clear" : s_a,
@@ -90,6 +90,7 @@ function checkWeather(){
 function pastWeather(a,b){
   var lat_hist = a;
   var lon_hist = b;
+  $(".weather-history").html("<h2> Past Week's Weather Data </h2>");
   for(var n = 1; n<=7; n++){
     var unixTimeStamp = new Date((new Date()).valueOf() - 1000*60*60*24*n).getTime() / 1000;
     console.log(unixTimeStamp);
